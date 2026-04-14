@@ -60,12 +60,8 @@ body {
 
 /* ITEMS */
 .item {
-  height: 400px;
-  background: #f8f8f8;
-  display: flex;
-  align-items: flex-end;
-  padding: 30px;
-  transition: all 0.4s ease;
+  position: relative;
+  color: white;
 }
 
 .item span {
@@ -77,4 +73,16 @@ body {
 .item:hover {
   background: #111;
   color: white;
+}
+
+.item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.2);
+}
+
+.item span {
+  position: relative;
+  z-index: 1;
 }
